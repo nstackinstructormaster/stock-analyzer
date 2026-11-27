@@ -9,3 +9,4 @@ if data.empty:
     st.warning("No price data found.")
 else:
     st.metric("Latest Closing Price", f"{data['Close'].iloc[-1]:,.2f}")
+    
