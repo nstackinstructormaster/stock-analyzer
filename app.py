@@ -12,8 +12,8 @@ else:
     st.metric("Latest Closing Price", f"{data['Close'].iloc[-1]:,.2f}")
     st.line_chart(data["Close"])
     st.metric("Trend Signal", trend_signal(data["Close"]))
-    st.subheader("Trading Volume")
-    st.bar_chart(data["Volume"])
+    st.subheader("Volume (Million Shares)")
+    st.bar_chart(data["Volume"] / 1_000_000)
 
 st.caption("Powered by Yahoo Finance")
     
