@@ -2,7 +2,7 @@ import streamlit as st
 import yfinance as yf
 from signals import trend_signal
 
-st.title("Stock Analyzer")
+st.title("AI Stock Analyzer")
 symbol = st.text_input("Stock symbol", "AAPL")
 data = yf.Ticker(symbol).history(period="6mo")
 
